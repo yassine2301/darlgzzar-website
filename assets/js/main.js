@@ -284,9 +284,17 @@
     });
 
     // ============================================
-    // Lazy Loading Images (when real images are added)
+    // Lazy Loading Images - Native browser support
     // ============================================
-  
+    // Le navigateur gère nativement loading="lazy"
+    // Pas besoin de JavaScript supplémentaire
+
+    // ============================================
+    // Prevent Flash of Unstyled Content
+    // ============================================
+    document.documentElement.classList.add('js-loaded');
+
+})();
 
 // ============================================
 // CSS for Animation Classes (add to main.css)
