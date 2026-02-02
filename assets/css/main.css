@@ -7,9 +7,9 @@
    ------------------------- */
 :root {
     /* Colors */
-    --color-primary: #C41E3A;
-    --color-primary-dark: #A31830;
-    --color-primary-light: #E8324F;
+    --color-primary: #D4A843;
+    --color-primary-dark: #B8922E;
+    --color-primary-light: #E8C35A;
     
     --color-secondary: #2E7D32;
     --color-secondary-dark: #1B5E20;
@@ -258,7 +258,7 @@ address {
 }
 
 .nav__logo-img {
-    height: 50px;
+    height: 85px;
     width: auto;
 }
 
