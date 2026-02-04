@@ -577,6 +577,14 @@ address {
     color: var(--color-dark);
 }
 
+.about__signature-title {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-gray-light);
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
 @media (min-width: 1024px) {
     .about__grid {
         grid-template-columns: 1fr 1fr;
@@ -653,43 +661,57 @@ address {
 
 .service-card {
     position: relative;
-    padding: var(--space-xl);
-    background-color: var(--color-white);
-    border: 1px solid rgba(0,0,0,0.06);
-    transition: all var(--transition-base);
+    background-size: cover;
+    background-position: center;
+    padding: 2.5rem 2rem;
+    border-radius: 4px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
-.service-card:hover {
-    box-shadow: var(--shadow-md);
-    border-color: transparent;
+.service-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+    z-index: 1;
+}
+
+.service-card__number,
+.service-card__title,
+.service-card__text {
+    position: relative;
+    z-index: 2;
 }
 
 .service-card__number {
     font-family: var(--font-display);
     font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-light-dim);
-    line-height: 1;
-    margin-bottom: var(--space-sm);
-    transition: color var(--transition-base);
-}
-
-.service-card:hover .service-card__number {
+    font-weight: 300;
     color: var(--color-primary);
-    opacity: 0.2;
+    opacity: 0.6;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
 }
 
 .service-card__title {
     font-family: var(--font-display);
     font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-dark);
-    margin-bottom: var(--space-sm);
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 0.75rem;
 }
 
 .service-card__text {
-    font-size: 0.9375rem;
-    color: var(--color-gray);
+    font-size: 0.95rem;
+    color: var(--color-gray-light);
+    line-height: 1.6;
 }
 
 @media (min-width: 768px) {
