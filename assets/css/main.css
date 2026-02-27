@@ -47,9 +47,9 @@
     --transition-slow: 0.4s ease;
     
     /* Borders */
-    --radius-sm: 2px;
-    --radius-md: 4px;
-    --radius-lg: 8px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
     
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
@@ -73,7 +73,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 body {
@@ -610,6 +610,7 @@ address {
     background-color: var(--color-dark-card);
     padding: var(--space-xl);
     text-align: center;
+    border-radius: var(--radius-md);
     transition: transform var(--transition-base), background-color var(--transition-base);
 }
 
@@ -669,7 +670,7 @@ address {
     background-size: cover;
     background-position: center;
     padding: 2.5rem 2rem;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     min-height: 280px;
     display: flex;
     flex-direction: column;
@@ -796,6 +797,7 @@ address {
 .product-card {
     background-color: var(--color-dark-card);
     overflow: hidden;
+    border-radius: var(--radius-md);
     transition: transform var(--transition-base);
 }
 
@@ -949,6 +951,7 @@ address {
     padding: var(--space-2xl);
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-lighter) 100%);
     color: var(--color-white);
+    border-radius: var(--radius-lg);
 }
 
 .iso-card__image {
@@ -1040,6 +1043,7 @@ address {
     height: 48px;
     background-color: var(--color-dark-card);
     color: var(--color-primary-light);
+    border-radius: var(--radius-md);
 }
 
 .contact__label {
@@ -1065,6 +1069,7 @@ a.contact__value:hover {
 .contact__form-wrapper {
     background-color: var(--color-dark-card);
     padding: var(--space-xl);
+    border-radius: var(--radius-lg);
 }
 
 .form-group {
@@ -1091,6 +1096,7 @@ a.contact__value:hover {
     color: var(--color-white);
     background-color: var(--color-dark-lighter);
     border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-md);
     padding: 0.875rem var(--space-md);
     transition: border-color var(--transition-fast);
 }
@@ -1528,4 +1534,213 @@ textarea:focus-visible {
 .products__cta .btn {
     font-size: 1rem;
     padding: 1rem 2.5rem;
+    border-radius: var(--radius-md);
+}
+
+/* -------------------------
+   Service Card Numbers - Hidden
+   ------------------------- */
+.service-card__number {
+    display: none;
+}
+
+/* -------------------------
+   Nav Dropdown Submenu
+   ------------------------- */
+.nav__item--dropdown {
+    position: relative;
+}
+
+.nav__dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-white);
+    opacity: 0.7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+    position: relative;
+}
+
+.nav__dropdown-toggle:hover {
+    opacity: 1;
+}
+
+.nav__dropdown-toggle svg {
+    transition: transform var(--transition-base);
+}
+
+.nav__item--dropdown:hover .nav__dropdown-toggle svg,
+.nav__item--dropdown.open .nav__dropdown-toggle svg {
+    transform: rotate(180deg);
+}
+
+.nav__submenu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+}
+
+.nav__item--dropdown:hover .nav__submenu,
+.nav__item--dropdown.open .nav__submenu {
+    display: flex;
+}
+
+.nav__submenu-link {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: var(--color-gray-light);
+    transition: color var(--transition-fast);
+}
+
+.nav__submenu-link:hover {
+    color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+    .nav__dropdown-toggle {
+        font-size: 0.9375rem;
+    }
+
+    .nav__submenu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0.75rem;
+        padding: 0.5rem 0;
+        padding-left: 0;
+        background: var(--color-dark-lighter);
+        border: 1px solid var(--color-gray-border);
+        border-radius: var(--radius-md);
+        min-width: 160px;
+        box-shadow: var(--shadow-lg);
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-base), transform var(--transition-base);
+        transform: translateX(-50%) translateY(-8px);
+    }
+
+    .nav__item--dropdown:hover .nav__submenu {
+        display: flex;
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .nav__submenu-link {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+        white-space: nowrap;
+    }
+
+    .nav__submenu-link:hover {
+        background: rgba(212, 168, 67, 0.1);
+    }
+}
+
+/* -------------------------
+   About - Politique
+   ------------------------- */
+.about__politique {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--color-light-dim);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.about__politique-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.about__politique-text {
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    line-height: 1.7;
+}
+
+/* -------------------------
+   Contact Social Links
+   ------------------------- */
+.contact__social {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.contact__social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.contact__social-link:hover {
+    color: var(--color-white);
+}
+
+/* -------------------------
+   Nav Social Links (desktop & mobile)
+   ------------------------- */
+.nav__social {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.nav__social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gray-light);
+    border: 1px solid var(--color-gray-border);
+    border-radius: 50%;
+    transition: all var(--transition-base);
+}
+
+.nav__social-link:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1001;
+}
+
+.nav__social-link--desktop {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .nav__social-link--desktop {
+        display: flex;
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav__social {
+        display: none;
+    }
 }

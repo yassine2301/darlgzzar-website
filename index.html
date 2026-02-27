@@ -64,14 +64,26 @@
                     <li class="nav__item">
                         <a href="#accueil" class="nav__link active">Accueil</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#a-propos" class="nav__link">À Propos</a>
+                    <li class="nav__item nav__item--dropdown">
+                        <button class="nav__link nav__dropdown-toggle">
+                            À Propos
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <ul class="nav__submenu">
+                            <li><a href="#a-propos" class="nav__submenu-link">Mission</a></li>
+                            <li><a href="#a-propos" class="nav__submenu-link">Valeurs</a></li>
+                            <li><a href="#a-propos" class="nav__submenu-link">Vision</a></li>
+                            <li><a href="#a-propos" class="nav__submenu-link">Politique</a></li>
+                        </ul>
                     </li>
                     <li class="nav__item">
                         <a href="#services" class="nav__link">Services</a>
                     </li>
                     <li class="nav__item">
                         <a href="#produits" class="nav__link">Produits</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalogue.html" class="nav__link" target="_blank">Catalogue</a>
                     </li>
                     <li class="nav__item">
                         <a href="#agrements" class="nav__link">Agréments</a>
@@ -158,6 +170,12 @@
                             <p>Notre engagement va au-delà de la transformation. Nous accompagnons les particuliers et les professionnels à travers le conseil, l'assistance et la formation. Notre mission : rehausser les standards de la boucherie marocaine et valoriser le Made in Morocco.</p>
                         </div>
                         
+                        <!-- Politique -->
+                        <div class="about__politique">
+                            <h4 class="about__politique-title">Notre Politique</h4>
+                            <p class="about__politique-text">Dar L'Gzzar s'engage à maintenir les plus hauts standards de sécurité alimentaire, à respecter les réglementations en vigueur, et à améliorer continuellement ses processus dans le respect de l'environnement et du bien-être animal.</p>
+                        </div>
+
                         <div class="about__signature">
                             <div class="about__signature-line"></div>
                             <span>Idriss Ben Hajji</span>
@@ -235,42 +253,36 @@
                 <div class="services__grid">
                     <article class="service-card" style="background-image: url('assets/images/services/service-viande-rouge.jpg');">
                         <div class="service-card__overlay"></div>
-                        <span class="service-card__number">01</span>
                         <h3 class="service-card__title">Découpe et Transformation de Viande Rouge</h3>
                         <p class="service-card__text">Bœuf de qualité supérieure, découpé selon les standards professionnels.</p>
                     </article>
                     
                     <article class="service-card" style="background-image: url('assets/images/services/service-viande-blanche.jpg');">
                         <div class="service-card__overlay"></div>
-                        <span class="service-card__number">02</span>
                         <h3 class="service-card__title">Découpe et Transformation de Viande Blanche</h3>
                         <p class="service-card__text">Volaille fraîche préparée avec soin et précision.</p>
                     </article>
                     
                     <article class="service-card" style="background-image: url('assets/images/services/service-elabores.jpg');">
                         <div class="service-card__overlay"></div>
-                        <span class="service-card__number">03</span>
                         <h3 class="service-card__title">Produits Élaborés</h3>
                         <p class="service-card__text">Viandes hachées, merguez, brochettes et préparations prêtes à cuisiner.</p>
                     </article>
                     
                     <article class="service-card" style="background-image: url('assets/images/services/service-charcuterie.jpg');">
                         <div class="service-card__overlay"></div>
-                        <span class="service-card__number">04</span>
                         <h3 class="service-card__title">Charcuterie Artisanale</h3>
                         <p class="service-card__text">Jambons, bacons, pastrami et spécialités fumées.</p>
                     </article>
                     
                     <article class="service-card" style="background-image: url('assets/images/services/service-formation.png');">
                         <div class="service-card__overlay"></div>
-                        <span class="service-card__number">05</span>
                         <h3 class="service-card__title">Formation & Conseil</h3>
                         <p class="service-card__text">Accompagnement des professionnels et particuliers.</p>
                     </article>
                     
                     <article class="service-card" style="background-image: url('assets/images/services/service-recherche.png');">
                         <div class="service-card__overlay"></div>
-                        <span class="service-card__number">06</span>
                         <h3 class="service-card__title">Recherche & Développement</h3>
                         <p class="service-card__text">Innovation continue pour des produits toujours plus qualitatifs.</p>
                     </article>
@@ -663,9 +675,21 @@
                                     </address>
                                 </div>
                             </div>
+
+                            <!-- Réseaux sociaux -->
+                            <div class="contact__social">
+                                <a href="#" class="contact__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                                    Facebook
+                                </a>
+                                <a href="#" class="contact__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                    Instagram
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="contact__form-wrapper">
                         <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
 
