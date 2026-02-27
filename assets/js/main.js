@@ -18,6 +18,10 @@
     const productPanels = document.querySelectorAll('.products__panel');
     const sections = document.querySelectorAll('section[id]');
 
+    // Hero dropdown
+    const heroDropdownBtn  = document.getElementById('heroDropdownBtn');
+    const heroDropdownMenu = document.getElementById('heroDropdownMenu');
+
     // ============================================
     // Mobile Navigation
     // ============================================
@@ -48,8 +52,9 @@
 
     // Close menu on escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            closeMenu();
+        if (e.key === 'Escape') {
+            if (navMenu.classList.contains('active')) closeMenu();
+            closeDropdown();
         }
     });
 
@@ -115,6 +120,56 @@
                 behavior: 'smooth'
             });
         });
+    });
+
+    // ============================================
+    // Hero Dropdown
+    // ============================================
+    function openDropdown() {
+        if (!heroDropdownMenu || !heroDropdownBtn) return;
+        heroDropdownMenu.classList.add('open');
+        heroDropdownBtn.classList.add('open');
+        heroDropdownBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+        if (!heroDropdownMenu || !heroDropdownBtn) return;
+        heroDropdownMenu.classList.remove('open');
+        heroDropdownBtn.classList.remove('open');
+        heroDropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    if (heroDropdownBtn) {
+        heroDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            heroDropdownMenu.classList.contains('open') ? closeDropdown() : openDropdown();
+        });
+    }
+
+    // Dropdown items → scroll to products + activate correct tab
+    document.querySelectorAll('.hero__dropdown-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeDropdown();
+
+            const tabId = this.dataset.tab;
+            if (tabId) switchTab(tabId);
+
+            // Scroll to products section
+            const productsSection = document.getElementById('produits');
+            if (productsSection) {
+                const headerHeight   = header.offsetHeight;
+                const targetPosition = productsSection.offsetTop - headerHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (heroDropdownMenu && !heroDropdownMenu.contains(e.target) && e.target !== heroDropdownBtn) {
+            closeDropdown();
+        }
     });
 
     // ============================================
@@ -284,10 +339,14 @@
     });
 
     // ============================================
-    // Lazy Loading Images - Native browser support
+    // Video autoplay fallback
     // ============================================
-    // Le navigateur gère nativement loading="lazy"
-    // Pas besoin de JavaScript supplémentaire
+    const heroVideo = document.querySelector('.hero__video');
+    if (heroVideo) {
+        heroVideo.play().catch(() => {
+            // Autoplay blocked — video stays paused
+        });
+    }
 
     // ============================================
     // Prevent Flash of Unstyled Content
