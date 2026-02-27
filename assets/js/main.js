@@ -173,6 +173,32 @@
     });
 
     // ============================================
+    // Nav Dropdown (À Propos submenu)
+    // ============================================
+    document.querySelectorAll('.nav__item--dropdown').forEach(item => {
+        const toggle = item.querySelector('.nav__dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', (e) => {
+                // On mobile, toggle the submenu open/close
+                if (window.innerWidth < 1024) {
+                    e.preventDefault();
+                    item.classList.toggle('open');
+                }
+            });
+        }
+    });
+
+    // Close nav submenu links on mobile
+    document.querySelectorAll('.nav__submenu-link').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+            document.querySelectorAll('.nav__item--dropdown').forEach(item => {
+                item.classList.remove('open');
+            });
+        });
+    });
+
+    // ============================================
     // Products Tabs
     // ============================================
     function switchTab(tabId) {

@@ -65,15 +65,15 @@
                         <a href="#accueil" class="nav__link active">Accueil</a>
                     </li>
                     <li class="nav__item nav__item--dropdown">
-                        <button class="nav__link nav__dropdown-toggle">
+                        <a href="#a-propos" class="nav__link nav__dropdown-toggle">
                             À Propos
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-                        </button>
+                        </a>
                         <ul class="nav__submenu">
-                            <li><a href="#a-propos" class="nav__submenu-link">Mission</a></li>
-                            <li><a href="#a-propos" class="nav__submenu-link">Valeurs</a></li>
-                            <li><a href="#a-propos" class="nav__submenu-link">Vision</a></li>
-                            <li><a href="#a-propos" class="nav__submenu-link">Politique</a></li>
+                            <li><a href="#a-propos" class="nav__submenu-link" data-scroll-to="mission">Mission</a></li>
+                            <li><a href="#valeurs" class="nav__submenu-link">Valeurs</a></li>
+                            <li><a href="#a-propos" class="nav__submenu-link" data-scroll-to="vision">Vision</a></li>
+                            <li><a href="#a-propos" class="nav__submenu-link" data-scroll-to="politique">Politique</a></li>
                         </ul>
                     </li>
                     <li class="nav__item">
@@ -164,14 +164,14 @@
                         <span class="section__label">À Propos de Nous</span>
                         <h2 class="section__title">L'Excellence Bouchère,<br>entre Tradition et Innovation</h2>
                         
-                        <div class="about__text">
+                        <div class="about__text" id="mission">
                             <p>Depuis des générations, la boucherie est au cœur du patrimoine culinaire marocain. Dar L'Gzzar s'inscrit dans cette tradition en combinant savoir-faire ancestral et innovation pour proposer des viandes d'exception, issues d'une sélection rigoureuse et d'une maîtrise artisanale sans compromis.</p>
-                            
-                            <p>Notre engagement va au-delà de la transformation. Nous accompagnons les particuliers et les professionnels à travers le conseil, l'assistance et la formation. Notre mission : rehausser les standards de la boucherie marocaine et valoriser le Made in Morocco.</p>
+
+                            <p id="vision">Notre engagement va au-delà de la transformation. Nous accompagnons les particuliers et les professionnels à travers le conseil, l'assistance et la formation. Notre mission : rehausser les standards de la boucherie marocaine et valoriser le Made in Morocco.</p>
                         </div>
-                        
+
                         <!-- Politique -->
-                        <div class="about__politique">
+                        <div class="about__politique" id="politique">
                             <h4 class="about__politique-title">Notre Politique</h4>
                             <p class="about__politique-text">Dar L'Gzzar s'engage à maintenir les plus hauts standards de sécurité alimentaire, à respecter les réglementations en vigueur, et à améliorer continuellement ses processus dans le respect de l'environnement et du bien-être animal.</p>
                         </div>
@@ -187,7 +187,7 @@
         </section>
 
         <!-- Valeurs Section -->
-        <section class="values section section--dark">
+        <section class="values section section--dark" id="valeurs">
             <div class="container">
                 <div class="section__header section__header--center">
                     <span class="section__label section__label--light">Ce qui nous définit</span>
@@ -296,7 +296,7 @@
         <section class="products section section--dark" id="produits">
             <div class="container">
                 <div class="section__header section__header--center">
-                    <span class="section__label section__label--light">Notre catalogue</span>
+                    <span class="section__label section__label--light">Aperçu de notre catalogue</span>
                     <h2 class="section__title section__title--light">Nos Produits</h2>
                 </div>
                 
