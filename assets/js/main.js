@@ -356,7 +356,7 @@
 
     // Observe elements for animation
     const animateElements = document.querySelectorAll(
-        '.about__content, .about__image-wrapper, .value-card, .service-card, .cert-card, .iso-card'
+        '.about__content, .about__image-wrapper, .value-card, .service-card, .agrement-card, .iso-showcase'
     );
 
     animateElements.forEach(el => {
