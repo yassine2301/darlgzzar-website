@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique qualité et sécurité alimentaire de Dar L'Gzzar. Notre engagement envers les plus hauts standards.">
+    <title>Notre Politique — Dar L'Gzzar</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+
+    <style>
+        :root {
+            --color-dark: #1A1A1A;
+            --color-dark-card: #252525;
+            --color-primary: #D4A843;
+            --color-primary-light: #E8C35A;
+            --color-white: #FFFFFF;
+            --color-gray-light: #9A9A9A;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Source Sans 3', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-dark);
+            color: var(--color-white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .politique-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #111;
+            border-bottom: 2px solid var(--color-primary);
+            flex-shrink: 0;
+        }
+
+        .politique-header__title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .politique-header__back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .politique-header__back:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        /* Content */
+        .politique-content {
+            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .politique-content__label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .politique-content__title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .politique-content__intro {
+            font-size: 1.125rem;
+            color: var(--color-gray-light);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .politique-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .politique-section__title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--color-primary);
+        }
+
+        .politique-section__text {
+            font-size: 1rem;
+            color: var(--color-gray-light);
+            line-height: 1.8;
+        }
+
+        .politique-section__list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .politique-section__list li {
+            font-size: 1rem;
+            color: var(--color-gray-light);
+            line-height: 1.8;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .politique-section__list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 8px;
+            height: 8px;
+            border: 2px solid var(--color-primary);
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        .politique-footer {
+            padding: 1.5rem 2rem;
+            background: #111;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+        }
+
+        .politique-footer__text {
+            font-size: 0.8rem;
+            color: var(--color-gray-light);
+        }
+    </style>
+</head>
+<body>
+    <header class="politique-header">
+        <span class="politique-header__title">Notre Politique</span>
+        <a href="index.html" class="politique-header__back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+            Retour au site
+        </a>
+    </header>
+
+    <main class="politique-content">
+        <span class="politique-content__label">Dar L'Gzzar</span>
+        <h1 class="politique-content__title">Politique Qualité & Sécurité Alimentaire</h1>
+
+        <p class="politique-content__intro">Dar L'Gzzar s'engage à maintenir les plus hauts standards de sécurité alimentaire, à respecter les réglementations en vigueur, et à améliorer continuellement ses processus dans le respect de l'environnement et du bien-être animal.</p>
+
+        <div class="politique-section">
+            <h2 class="politique-section__title">Sécurité Alimentaire</h2>
+            <p class="politique-section__text">Nous appliquons rigoureusement les principes du système HACCP et les exigences de la norme ISO 22000:2018 pour garantir la sécurité de nos produits à chaque étape de la chaîne de production, de la réception des matières premières à la livraison du produit fini.</p>
+        </div>
+
+        <div class="politique-section">
+            <h2 class="politique-section__title">Nos Engagements</h2>
+            <ul class="politique-section__list">
+                <li>Respecter les réglementations sanitaires nationales et internationales</li>
+                <li>Assurer la traçabilité complète de tous nos produits</li>
+                <li>Former continuellement notre personnel aux bonnes pratiques d'hygiène</li>
+                <li>Améliorer en permanence nos processus de fabrication</li>
+                <li>Réduire notre impact environnemental</li>
+                <li>Garantir le bien-être animal dans l'ensemble de notre chaîne d'approvisionnement</li>
+            </ul>
+        </div>
+
+        <div class="politique-section">
+            <h2 class="politique-section__title">Amélioration Continue</h2>
+            <p class="politique-section__text">Nous mesurons régulièrement nos performances à travers des audits internes, des contrôles qualité et le suivi d'indicateurs clés. Chaque retour client est une opportunité d'amélioration que nous prenons en considération pour élever nos standards.</p>
+        </div>
+
+        <div class="politique-section">
+            <h2 class="politique-section__title">Responsabilité Environnementale</h2>
+            <p class="politique-section__text">Dar L'Gzzar intègre des pratiques durables dans son activité quotidienne : gestion responsable des déchets, optimisation de la consommation d'énergie et d'eau, et sélection de fournisseurs partageant nos valeurs environnementales.</p>
+        </div>
+    </main>
+
+    <footer class="politique-footer">
+        <p class="politique-footer__text">&copy; 2025 Dar L'Gzzar. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
